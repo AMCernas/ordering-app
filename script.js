@@ -3,7 +3,9 @@ import {menuArray} from './data.js'
 const container = document.getElementById('container')
 const orderData = document.getElementById('order-data')
 const modal = document.getElementById('modal')
-const orders = {} // { id: quantity }
+const orderForm = document.getElementById('order-form')
+
+const orders = {} 
 
 function getMenuHtml(){
     return menuArray.map(function(item){
@@ -24,7 +26,6 @@ function getMenuHtml(){
 }
 container.innerHTML = getMenuHtml()
 
-// Event delegation for add buttons
 container.addEventListener('click', function(e) {
     if (e.target.classList.contains('add-btn')) {
         const id = e.target.getAttribute('data-id')
@@ -34,7 +35,6 @@ container.addEventListener('click', function(e) {
     }
 })
 
-// Event delegation for remove buttons
 orderData.addEventListener('click', function(e) {
     if (e.target.classList.contains('remove-btn')) {
         const id = e.target.getAttribute('data-id')
@@ -46,6 +46,13 @@ orderData.addEventListener('click', function(e) {
     }
 })
 
+orderForm.addEventListener('submit', function(e) {
+    e.preventDefault()
+    const fullname = orderForm.elements['fullname'].value
+    modal.style.display = 'none'
+    orderData.innerHTML = `<h2 class="order-message">Thank you, ${fullname}! Your order is on its way.</h2>`
+    for (let id in orders) delete orders[id]
+})
 
 function renderOrder() {
     let order = ''
@@ -79,3 +86,9 @@ function renderOrder() {
         })
     }
 }
+
+modal.addEventListener('click', function(e) {
+    if (e.target === modal) {
+        modal.style.display = 'none'
+    }
+})

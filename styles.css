@@ -126,20 +126,20 @@ margin: auto;
 }
 
 .modal {
-  display: none; /* Show with display: flex or block when needed */
-  position: fixed;
-  top: 0; left: 0; right: 0; bottom: 0;
-  justify-content: center;
-  align-items: center;
-  background: rgba(0,0,0,0.5); /* Optional: dark overlay */
-  z-index: 1000;
+    display: none; 
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0,0,0,0.5); 
+    z-index: 1000;
 }
 
 .modal-content {
-  background: #fff;
-  padding: 2rem;
-  border-radius: 8px;
-  min-width: 300px;
+    background: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    min-width: 300px;
 }
 
 .order-form{
@@ -151,8 +151,33 @@ margin: auto;
 }
 
 input{
+    width: 92.5%;
+    margin: 5px 0;
     padding: 10px;
-    margin: 10px 0;
     border-radius: 3px;
     font-size: 20px;
+    border: 2px solid #757575;
+}
+
+label{
+    width: 100%;
+}
+
+.submit-btn{
+    width: 100%;
+    border: none;
+    background-color: #16DB99;
+    padding: 15px 0;
+    margin: 10px 0 0 0;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+}
+
+.order-message{
+    background-color: #ECFDF5;
+    color: #16DB99;
+    padding: 20px 40px;  
 }

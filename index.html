@@ -17,21 +17,40 @@
         
     </main>
     <section class="order-data" id="order-data"></section>
+
     <div id="modal" class="modal">
         <div class="modal-content">
             <form id="order-form" class="order-form">
-            <h2>Complete your order</h2>
+            <h2>Enter card details</h2>
             <label>
-                <input type="text" name="name" placeholder="Enter your name" required>
+                <input 
+                    type="text" 
+                    name="fullname" 
+                    placeholder="Enter your name" 
+                    required
+                >
             </label>
             <label>
-                <input type="number" name="address" placeholder="Enter card number" required>
+                <input 
+                    type="number" 
+                    name="address" 
+                    maxlength="16" 
+                    pattern="\d{16}"
+                    required
+                    placeholder="Enter card number" 
+                >
             </label>
             <label>
-                <input type="number" name="address" placeholder="Enter CVV" required>
+                <input 
+                    type="number" 
+                    name="address" 
+                    maxlength="3"
+                    pattern="\d{3}"
+                    required
+                    placeholder="Enter CVV" 
+                >
             </label>
-            <button type="submit">Submit Order</button>
-            <button type="button" id="close-modal">Cancel</button>
+            <button class="submit-btn" type="submit">Submit Order</button>
             </form>
         </div>
     </div>
