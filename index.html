@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Smythe&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <img src="./banner.png" alt="image of a burger with a text that says 'jimmy´s dinner'" >
+    </header>
+    <main class="container" id="container">
+        
+    </main>
+    <section class="order-data" id="order-data"></section>
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <form id="order-form" class="order-form">
+            <h2>Complete your order</h2>
+            <label>
+                <input type="text" name="name" placeholder="Enter your name" required>
+            </label>
+            <label>
+                <input type="number" name="address" placeholder="Enter card number" required>
+            </label>
+            <label>
+                <input type="number" name="address" placeholder="Enter CVV" required>
+            </label>
+            <button type="submit">Submit Order</button>
+            <button type="button" id="close-modal">Cancel</button>
+            </form>
+        </div>
+    </div>
+
+<script src="script.js" type="module"></script>
+</body>
+</html>
